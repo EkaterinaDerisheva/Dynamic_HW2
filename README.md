@@ -10,15 +10,15 @@ ROS 2 (Jazzy) пакет с моделью шарнирного манипуля
 | Пункт задания | Файл / папка | Описание |
 |---|---|---|
 | 1. ROS пакет | `package.xml`, `setup.py`, `setup.cfg`, `resource/` | пакет `my_robot` (ament_python) |
-| 2. URDF файл | [`urdf/my_robot.urdf`](urdf/my_robot.urdf) | 5 звеньев, 3 вращательных шарнира и жёсткое крепление захвата |
-| 3–4. Код Python, управление положением | [`my_robot/arm_controller.py`](my_robot/arm_controller.py) | узел `arm_controller`: перебирает опорные конфигурации и принимает целевую конфигурацию из топика `/target_position` |
-| 5. Launch файлы | [`launch/display.launch.py`](launch/display.launch.py) | RViz + robot_state_publisher + joint_state_publisher_gui (ползунки) |
-| | [`launch/move.launch.py`](launch/move.launch.py) | RViz + robot_state_publisher + arm_controller (автоматическое движение) |
-| 6. Видео | [`docs/demo.mp4`](docs/demo.mp4) | запуск визуализации и движение робота |
-| 7. URDF Tree | [`docs/urdf_tree.png`](docs/urdf_tree.png) | также `urdf_tree.pdf` и исходник `urdf_tree.gv` |
-| 8. Отчёт | [`docs/report.docx`](docs/report.docx) | описание робота, структура, прямая задача кинематики, описание движения |
-| — | [`rviz/robot.rviz`](rviz/robot.rviz) | настройки RViz |
-| — | `test/` | стандартные тесты ament (flake8, pep257, copyright) |
+| 2. URDF файл | [`my_robot/urdf/my_robot.urdf`](my_robot/urdf/my_robot.urdf) | 5 звеньев, 3 вращательных шарнира и жёсткое крепление захвата |
+| 3–4. Код Python, управление положением | [`my_robot/my_robot/arm_controller.py`](my_robot/my_robot/arm_controller.py) | узел `arm_controller`: перебирает опорные конфигурации и принимает целевую конфигурацию из топика `/target_position` |
+| 5. Launch файлы | [`my_robot/launch/display.launch.py`](my_robot/launch/display.launch.py) | RViz + robot_state_publisher + joint_state_publisher_gui (ползунки) |
+| | [`my_robot/launch/move.launch.py`](my_robot/launch/move.launch.py) | RViz + robot_state_publisher + arm_controller (автоматическое движение) |
+| 6. Видео | [`my_robot/docs/demo.mp4`](my_robot/docs/demo.mp4) | запуск визуализации и движение робота |
+| 7. URDF Tree | [`my_robot/docs/urdf_tree.png`](my_robot/docs/urdf_tree.png) | также `urdf_tree.pdf` и исходник `urdf_tree.gv` |
+| 8. Отчёт | [`my_robot/docs/report.docx`](my_robot/docs/report.docx) | описание робота, структура, прямая задача кинематики, описание движения |
+| — | [`my_robot/rviz/robot.rviz`](my_robot/rviz/robot.rviz) | настройки RViz |
+| — | `my_robot/test/` | стандартные тесты ament (flake8, pep257, copyright) |
 
 ## Запуск
 
