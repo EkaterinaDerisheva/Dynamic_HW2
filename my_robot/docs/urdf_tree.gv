@@ -1,0 +1,17 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"turret" [label="turret"];
+"upper_arm" [label="upper_arm"];
+"forearm" [label="forearm"];
+"gripper" [label="gripper"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "base_to_turret" [label="xyz: 0 0 0.05 \nrpy: 0 -0 0"]
+"base_to_turret" -> "turret"
+"turret" -> "turret_to_upper_arm" [label="xyz: 0 0 0.1 \nrpy: 0 -0 0"]
+"turret_to_upper_arm" -> "upper_arm"
+"upper_arm" -> "upper_arm_to_forearm" [label="xyz: 0 0 0.4 \nrpy: 0 -0 0"]
+"upper_arm_to_forearm" -> "forearm"
+"forearm" -> "forearm_to_gripper" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"forearm_to_gripper" -> "gripper"
+}
